@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import { Link, hashHistory } from "react-router";
+import { Link } from "react-router";
 
 import query from "../queries/current_user";
 import mutation from "../mutations/Logout";
