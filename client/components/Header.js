@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { graphql } from "react-apollo";
-import { Link } from "react-router";
+import { Link, hashHistory } from "react-router";
 
-import query from "../queries/header_query";
-import mutation from "../mutations/header_mutation";
+import query from "../queries/current_user";
+import mutation from "../mutations/Logout";
 
 class Header extends Component {
   onLogout() {
@@ -30,10 +30,10 @@ class Header extends Component {
       return (
         <div>
           <li>
-            <Link to="/singup">Signup</Link>
+            <Link to="/signup">Signup</Link>
           </li>
           <li>
-            <Link to="/signin">Signin</Link>
+            <Link to="/login">Login</Link>
           </li>
         </div>
       );
@@ -41,7 +41,6 @@ class Header extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     return (
       <nav>
         <div className="nav-wrapper">

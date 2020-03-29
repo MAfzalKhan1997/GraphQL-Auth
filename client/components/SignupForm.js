@@ -2,11 +2,11 @@ import React, { Component } from "react";
 import { graphql } from "react-apollo";
 import { hashHistory } from "react-router";
 
-import mutation from "../mutations/Login";
+import mutation from "../mutations/Signup";
 import AuthForm from "./AuthForm";
 import query from "../queries/current_user";
 
-class LoginForm extends Component {
+class SignupForm extends Component {
   constructor(props) {
     super(props);
 
@@ -44,7 +44,7 @@ class LoginForm extends Component {
     const { errors } = this.state;
     return (
       <div>
-        <h3>Login</h3>
+        <h3>Signup</h3>
         <AuthForm
           errors={errors}
           onSubmit={(email, password) => this.onSubmit(email, password)}
@@ -54,4 +54,4 @@ class LoginForm extends Component {
   }
 }
 
-export default graphql(query)(graphql(mutation)(LoginForm));
+export default graphql(query)(graphql(mutation)(SignupForm));

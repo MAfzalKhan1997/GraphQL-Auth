@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./Header";
 
-const App = ({ Children }) => (
-  <div>
+const App = ({ children }) => (
+  <div className="container">
     <Header />
-    {Children}
+    {children}
   </div>
 );
 
